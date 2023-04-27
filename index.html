@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1 id="title">B I L L  S P I L L</h1><br>
+    <div class="container" id="main-ctr">
+        <div class="container" id="ctr1" >
+            <label for="amount" class="labels">Bill</label><br>
+            <button class="btn">Rs.</button>
+            <input type="number" name="amount" id="amt" value="0"/>
+            <div class="container" id="ctr1-1">
+                <label class="labels">Select Tip %</label><br>
+                <button class="btn" onclick="calculateTip(5)">5%</button>
+                <button class="btn" onclick="calculateTip(10)">10%</button>
+                <button class="btn" onclick="calculateTip(15)">15%</button><br>
+                <button class="btn" onclick="calculateTip(25)">25%</button>
+                <button class="btn" onclick="calculateTip(50)">50%</button>
+                <button class="btn" onclick="calculateTip(75)">75%</button>
+            </div>
+            <label for="people" class="labels">Number of people</label><br>
+            <button class="persons_btn"  onclick="increasePersons()">+</button>
+            <input type="number" name="people" id="nop" value="1"/>
+            <button class="persons_btn"  onclick="decreasePersons()">-</button>
+        </div>
+        <div class="container" id="ctr2">
+            <label class="op_labels">Tip Amount <br><span class="perperson">/ person</span></label>
+            <label class="op_vals" id="tip_res">Rs. 0.00</label><br>
+            <label class="op_labels">Total <br><span class="perperson">/ person</span></label>
+            <label class="op_vals" id="tot_res">Rs. 0.00</label><br>
+            <button id="reset_btn" onclick="reset()">R E S E T</button>
+        </div>
+    </div>
+    <marquee behavior="" id="scroll" direction="right">Vinay's 3rd micro project</marquee>
+</body>
+</html>
